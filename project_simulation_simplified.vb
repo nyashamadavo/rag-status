@@ -7,7 +7,7 @@ Call fill_color_codes
 
 End Sub
 Sub fill_colors()
-    'this fills 10 cells with randomly selected colors
+    'this fills cells with randomly selected colors representing project statuses 
     
     Dim i As Integer, t As Integer
     
@@ -22,21 +22,21 @@ Sub fill_colors()
 End Sub
 
 Function choose_color()
-
+'this selects a random color from red, amber, green, blue, where blue denotes finished status
 Dim rand_num As Double
 
     rand_num = WorksheetFunction.RandBetween(1, 4)
     If rand_num = 1 Then
-        choose_color = 255
+choose_color = 255 'red
         Exit Function
     ElseIf rand_num = 2 Then
-        choose_color = 49407
+    choose_color = 49407 'amber
         Exit Function
     ElseIf rand_num = 3 Then
-        choose_color = 12611584
+        choose_color = 12611584 'blue
         Exit Function
     ElseIf rand_num = 4 Then
-        choose_color = 5287936
+            choose_color = 5287936 'green
         Exit Function
     End If
     
